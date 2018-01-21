@@ -8,7 +8,7 @@ Just type the following commands
 
 ```
 $ make
-$ docker run -it shaoguangleo/ubuntu-pgplot[:version]
+$ docker run -it -e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix shaoguangleo/ubuntu-pgplot
 ```
 
 As we all know, the version can be `lateset` or `$ cat VERSION`
