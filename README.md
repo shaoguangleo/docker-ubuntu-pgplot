@@ -7,7 +7,6 @@ Dockerfile to build a pgplot image based on Ubuntu.
 Just type the following commands
 
 ```
-$ make
 $ docker run -it -e DISPLAY=unix$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix shaoguangleo/ubuntu-pgplot
 ```
 
