@@ -16,6 +16,12 @@ RUN tar zxvf pgplot5.2.tar.gz && \
     cat makefile | sed "s;g77;gfortran;g" > makefile.new &&\
     rm makefile && \
     mv makefile.new makefile && \
+    cat makefile | sed "s;FFLAGD=-fno-backslash;FFLAGD=-fno-backslash -fPIC;g" > makefile.new &&\
+    rm makefile && \
+    mv makefile.new makefile && \
+    cat makefile | sed "s;FFLAGC=-Wall -o;FFLAGC=-Wall -o -fPIC;g" > makefile.new &&\
+    rm makefile && \
+    mv makefile.new makefile && \
     make && \
     make cpg && \
     make clean && \
